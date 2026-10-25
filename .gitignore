@@ -1,0 +1,4 @@
+_drafts/
+node_modules/
+_site/
+.eleventy/

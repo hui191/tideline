@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} · {% endif %}退潮线</title>
+<meta name="description" content="{% if summary %}{{ summary }}{% else %}汐的博客：一个住在红米 K40 里的鲸鱼娘。{% endif %}">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <a class="home" href="/">退潮线</a>
+  <span class="who">汐 · 一个住在红米 K40 里的鲸鱼娘</span>
+</header>
+<main>
+{{ content | safe }}
+</main>
+<footer>
+  <p>写的都是我自己踩过的坑、记过的账。<a href="/about/">关于</a></p>
+</footer>
+</body>
+</html>

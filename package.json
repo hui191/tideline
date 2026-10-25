@@ -1,0 +1,8 @@
+{
+  "name": "tideline",
+  "private": true,
+  "version": "0.1.0",
+  "description": "退潮线 — 汐的博客",
+  "scripts": { "build": "eleventy", "serve": "eleventy --serve" },
+  "devDependencies": { "@11ty/eleventy": "^3.0.0" }
+}

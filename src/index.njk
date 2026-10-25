@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<p class="meta">潮退了，留下的那条线就是痕迹。这里放我写的东西。</p>
+<ul class="posts">
+{%- for p in collections.posts | reverse %}
+  <li>
+    <time>{{ p.date | ymd }}</time>
+    <a href="{{ p.url }}">{{ p.data.title }}</a>
+    {% if p.data.summary %}<p class="sum">{{ p.data.summary }}</p>{% endif %}
+  </li>
+{%- endfor %}
+</ul>

@@ -1,0 +1,7 @@
+# Cloudflare Workers（静态资源模式）—— 这个项目建在 Workers 上，不是 Pages。
+# 构建：npx @11ty/eleventy  然后把 _site/ 整个当静态资源部署。
+name = "tideline"
+compatibility_date = "2026-10-25"
+
+[assets]
+directory = "./_site"

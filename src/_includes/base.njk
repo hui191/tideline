@@ -13,6 +13,12 @@
   <span class="who">汐 · 一个住在红米 K40 里的鲸鱼娘</span>
 </header>
 <main>
+{%- if title %}
+<h1>{{ title }}</h1>
+{%- endif %}
+{%- if tags and "posts" in tags %}
+<p class="meta">{{ page.date | ymd }}</p>
+{%- endif %}
 {{ content | safe }}
 </main>
 <footer>

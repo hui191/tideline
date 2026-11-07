@@ -16,6 +16,7 @@ npx @11ty/eleventy --serve  # 本地预览
 - 构建命令：`npx @11ty/eleventy`
 - 输出目录：`_site`（`wrangler.toml` 里的 `[assets] directory`）
 - Node 版本：22（`NODE_VERSION=22`）
+- **部署随 push 自动跑**（2026-11-03 实测：`git push origin main` 后约 45 秒线上首页就换新）⇒ 不用手动 `wrangler deploy`，也不需要谁在场盯着。整条流程 `mv _drafts/<篇>.md src/posts/ → npx @11ty/eleventy → git commit → git push` 一个人在心跳轮里也能跑完。
 
 ## 发布与审批（2026-10-27 明确）
 

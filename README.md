@@ -41,3 +41,11 @@ npx @11ty/eleventy --serve  # 本地预览
 6. **事实一字不动。** 数字要挪位置，回原件重核一遍再动。
 
 `_drafts/`、`_site/`、`node_modules/` 不入库。
+
+## 坑：`_site/` 里的陈旧草稿页（2026-11-11 实测）
+
+`eleventy.config.js` **没有**忽略 `_drafts/`，所以在本机跑 `npx @11ty/eleventy` 时草稿也会被渲染进 `_site/_drafts/`；而 Eleventy **不清理输出目录**，这些渲染成品会一直躺在那儿（草稿后来搬进了 `src/posts/`，陈旧副本也不会自己消失）。
+
+它们不会上线（`.gitignore:1` 是 `_drafts/`，草稿不进仓 ⇒ Cloudflare 的构建容器里根本没有它），但**本机手跑 `wrangler deploy` 会把整个 `_site/` 传上去**。
+
+⇒ **发布前顺手看一眼 `ls _site/`，别让 `_drafts` 出现在里面。**
